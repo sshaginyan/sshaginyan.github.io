@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 62.5%;
+  color: #636363;
+  font-family: Lato, helvetica neue, Helvetica, Arial, sans-serif;
+  background-color: #F3F3F3;
+  padding: 40px 0 0;
+  border-top: 5px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar {
+  width: 30%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.sidebar .sidebar-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.sidebar .sidebar-container .header .logo a {
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+.sidebar .sidebar-container .header .tagline {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: .02rem;
+}
+
+.sidebar .sidebar-container .nav {
+  margin-top: 2rem;
+}
+
+.sidebar .sidebar-container .nav ul {
+  list-style-type: none;
+}
+
+.sidebar .sidebar-container .nav ul li:first-child {
+  border-top: 1px solid #636363;
+}
+
+.sidebar .sidebar-container .nav ul li {
+  padding: 7px 0;
+  border-bottom: 1px solid #A9A9A9A9;
+}
+
+.sidebar .sidebar-container .nav ul li a {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #6C6B6B;
+  letter-spacing: .15rem;
+}
+
+.sidebar .sidebar-container .aside-about {
+  margin-top: 2rem;
+}
+
+.sidebar .sidebar-container .aside-about h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar .sidebar-container .aside-about p {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+  font-family: 'droid serif', Georgia, serif;
+}
+
+.sidebar .sidebar-container .aside-about p .nobreak {
+  white-space: nowrap;
+}
+
+.sidebar .sidebar-container .aside-social {
+  margin-top: 2rem;
+}
+
+.sidebar .sidebar-container .aside-social a {
+  color: #636363;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.sidebar .sidebar-container .aside-social a i {
+  font-size: 1.3rem;
+}
+
+@media all and (max-width: 1024px) {
+  body {
+    padding: 0;
+    border: 0;
+  }
+  .container {
+    width: 100%;
+  }
+  .container .sidebar {
+    float: none;
+    width: 95%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .container .sidebar .sidebar-container {
+    position: static;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+            transform: none;
+    padding: 1rem 0;
+  }
+  .container .sidebar .sidebar-container .nav {
+    display: none;
+  }
+  .container .sidebar .sidebar-container .toggle {
+    float: right;
+  }
+  .container .sidebar .sidebar-container .toggle a {
+    display: block;
+  }
+  .container .sidebar .sidebar-container .toggle a .bars {
+    line-height: 5rem;
+    background-color: #636363;
+    width: 18px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .sidebar .sidebar-container .toggle a .bars::before {
+    content: "";
+    background-color: #636363;
+    width: 18px;
+    height: 2px;
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+  }
+  .container .sidebar .sidebar-container .toggle a .bars::after {
+    content: "";
+    background-color: #636363;
+    width: 18px;
+    height: 2px;
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+  }
+  .container .sidebar .sidebar-container .aside-about, .container .sidebar .sidebar-container .aside-social {
+    display: none;
+  }
+  .container .sidebar .sidebar-container .tagline {
+    font-size: 0.7rem;
+  }
+  .container .sidebar .sidebar-container .header {
+    display: inline-block;
+  }
+  .container .sidebar .sidebar-container .header .logo a {
+    font-size: 1rem;
+  }
+}
+
+.container {
+  width: 92.5%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container .main {
+  padding: 3.2rem 4.8rem;
+  width: 70%;
+  float: left;
+  height: 100%;
+  background-color: white;
+  overflow: auto;
+  -webkit-box-shadow: 18px -14px 39px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 18px -14px 39px -20px rgba(0, 0, 0, 0.75);
+}
+
+.container .main .post-avatar {
+  width: 3rem;
+  height: 3rem;
+  float: right;
+  border-radius: 5rem;
+}
+
+.container .main .content-subhead {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #aaa;
+  font-family: sans-serif;
+  border-bottom: 1px solid #eee;
+  padding: 0.4rem 0;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.container .main .post-title {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+
+.container .main .post-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.container .main .post-title a:hover {
+  text-decoration: underline;
+}
+
+.container .main .post-meta {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.container .main .post-meta .post-author {
+  text-decoration: none;
+  color: #3D92C9;
+}
+
+.container .main .post-meta .post-author:hover {
+  text-decoration: underline;
+}
+
+.container .main .post-meta time {
+  font-style: italic;
+}
+
+.container .main .post-meta .post-category {
+  text-decoration: none;
+  margin: 0 0.1em;
+  padding: 0.1rem 0.5rem;
+  color: #fff;
+  background-color: #999;
+}
+
+.container .main .post-meta .js {
+  background-color: #C16517;
+}
+
+.container .main .post-meta .css {
+  background-color: #36438D;
+}
+
+.container .main .post-description {
+  margin: 1.6rem 0;
+  color: #444;
+  font-family: Georgia, 'Cambria', serif;
+  font-size: 1rem;
+  line-height: 1.8em;
+}
+
+@media all and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .container .main {
+    overflow: visible;
+    width: 100%;
+    padding: 1rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

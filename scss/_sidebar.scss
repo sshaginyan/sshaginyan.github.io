@@ -1,0 +1,170 @@
+.sidebar {
+    width: 30%;
+    height: 100%;
+    float: left;
+    position: relative;
+
+    .sidebar-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .header {
+            .logo a {
+                color: inherit;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                font-weight: 300;
+                letter-spacing: .02rem;
+            }
+        }
+
+        .nav {
+            margin-top: 2rem;
+
+            ul {
+                list-style-type: none;
+
+                li:first-child {
+                    border-top: 1px solid $color-primary;
+                }
+            
+                li {
+                    padding: 7px 0;
+                    border-bottom: 1px solid $color-secondary;
+
+                    a {
+                        font-size: 1.2rem;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: #6C6B6B;
+                        letter-spacing: .15rem;
+                    }
+                }
+            }
+        }
+
+        .aside-about {
+            margin-top: 2rem;
+            
+            h3 {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: .15rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: .9rem;
+                margin-bottom: 1rem;
+                font-family: 'droid serif', Georgia, serif;
+                .nobreak {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .aside-social {
+            margin-top: 2rem;
+
+            a {
+                color: $color-primary;
+                text-decoration: none;
+                margin-right: 1rem;
+
+                i {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+    }
+}
+
+@media all and (max-width: 1024px) {
+    body {
+        padding: 0;
+        border: 0;
+    }
+
+    .container {
+        width: 100%;
+
+        .sidebar {
+            float: none;
+            width: 95%;
+            margin: 0 auto;
+            height: auto;
+
+            .sidebar-container {
+                position: static;
+                top: auto;
+                left: auto;
+                transform: none;
+                padding: 1rem 0;
+                .nav {
+                    display: none;
+                }
+
+                .toggle {
+                    float: right;
+                    a {
+                        display: block;
+                        .bars {
+                            line-height: 5rem;
+                            background-color: $color-primary;
+                            width: 18px;
+                            height: 2px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+                        .bars::before {
+                            content: "";
+                            background-color: $color-primary;
+                            width: 18px;
+                            height: 2px;
+                            display: inline-block;
+                            position: absolute;
+                            top: 16px;
+                        }
+
+                        .bars::after {
+                            content: "";
+                            background-color: $color-primary;
+                            width: 18px;
+                            height: 2px;
+                            display: inline-block;
+                            position: absolute;
+                            top: 28px;
+                        }
+                    }
+                }
+
+                .aside-about, .aside-social {
+                    display: none;
+                }
+
+                .tagline {
+                    font-size: 0.7rem;
+                }
+
+                .header {
+                    display: inline-block;
+                    .logo {
+                        a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
