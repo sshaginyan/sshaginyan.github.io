@@ -283,4 +283,61 @@ body {
     box-shadow: none;
   }
 }
+
+.slideshow {
+  height: inherit;
+  position: relative;
+}
+
+.slideshow .frame {
+  height: 350px;
+}
+
+.slideshow .frame img {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.slideshow .frame img.active {
+  display: block;
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.slideshow .gallery {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.slideshow .gallery img {
+  width: 200px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slideshow .gallery img.selected {
+  padding: 0.4rem;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #FDF991;
+}
 /*# sourceMappingURL=main.css.map */
